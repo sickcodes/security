@@ -5,4 +5,10 @@ A vulnerability in the Private Internet Access (PIA) VPN Client for Linux v1.5 t
 
 **CVE-2020-15590** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-001.md
 
+### SICK-2020-004 Hindotech HK1 TV Box - Root Privilege Escalation - Improper Access Control
+
+The HK1 Box S905X3 TV Box contains a vulnerability that allows a local unprivileged user to escalate to root using the /system/xbin/su binary. While connected to the device through the serial port (UART), or while using adb as an unprivileged user, the local attacker can execute the /system/xbin/su binary and execute arbitrary code as root, steal social networking account tokens, WiFi passwords, cookies, saved passwords, user location data, message history, emails, or contacts, etc.
+
+**SICK-2020-004** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-004.md
+
 
