@@ -22,3 +22,22 @@ A vulnerability in the Brave Browser allows an attacker to view the last time a 
 **CVE-2020-8276** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-013.md
 
 
+### CVE-2020-27403
+#### Exposure of Sensitive Information to an Unauthorized Actor - Brave Browser Potentially Logs The Last Time A Tor Window Was Used.
+
+A vulnerability in the TCL Android Smart TV series by TCL Technology Group Corporation allows an attacker on the adjacent network to arbitrarily browse and download sensitive files over an insecure web server running on port 7989 that lists all files & directories.
+
+**CVE-2020-27403** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-009.md
+
+
+### CVE-2020-28055
+#### Exposure of Sensitive Information to an Unauthorized Actor - Brave Browser Potentially Logs The Last Time A Tor Window Was Used.
+
+A vulnerability in the TCL Android Smart TV series by TCL Technology Group Corporation allows a local unprivileged attacker, such as a malicious App, to read and write to critical vendor resource directories within the Android TV file system, including the vendor upgrades folder.
+
+**CVE-2020-28055** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-012.md
+
+
+
+
+
