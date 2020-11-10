@@ -23,7 +23,7 @@ A vulnerability in the Brave Browser allows an attacker to view the last time a 
 
 
 ### CVE-2020-27403
-#### Exposure of Sensitive Information to an Unauthorized Actor - Brave Browser Potentially Logs The Last Time A Tor Window Was Used.
+#### Exposure of Information Through Directory Listing - TCL Android TV Filesystem Browsable to Unauthenticated Attackers Over the Adjacent Network on Port 7989
 
 A vulnerability in the TCL Android Smart TV series by TCL Technology Group Corporation allows an attacker on the adjacent network to arbitrarily browse and download sensitive files over an insecure web server running on port 7989 that lists all files & directories.
 
@@ -31,7 +31,7 @@ A vulnerability in the TCL Android Smart TV series by TCL Technology Group Corpo
 
 
 ### CVE-2020-28055
-#### Exposure of Sensitive Information to an Unauthorized Actor - Brave Browser Potentially Logs The Last Time A Tor Window Was Used.
+#### Incorrect Permission Assignment for Critical Vendor Resources - TCL Android TV Vendor Configuration & Upgrade Folders World Writable to Local Attacker
 
 A vulnerability in the TCL Android Smart TV series by TCL Technology Group Corporation allows a local unprivileged attacker, such as a malicious App, to read and write to critical vendor resource directories within the Android TV file system, including the vendor upgrades folder.
 
