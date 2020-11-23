@@ -38,6 +38,14 @@ A vulnerability in the TCL Android Smart TV series by TCL Technology Group Corpo
 **CVE-2020-28055** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-012.md
 
 
+### CVE-2020-28360
+#### private-ip npm package - Incorrect Regular Expression - Insufficient RegEx in private-ip npm package v1.0.5 and below insufficiently filters reserved IP ranges resulting in indeterminate SSRF.
+
+Insufficient RegEx in private-ip npm package v1.0.5 and below insufficiently filters reserved IP ranges resulting in indeterminate SSRF. An attacker can perform a large range of requests to ARIN reserved IP ranges, resulting in an indeterminable number of critical attack vectors for server-side projects using private-ip 1.0.5 and below.
+
+**CVE-2020-28360** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-022.md
+
+
 
 
 
