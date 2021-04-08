@@ -1,0 +1,5 @@
+Contact: security@sick.codes
+Expires: Tue, 1 Jan 2030 00:01 +0000
+Encryption: https://sick.codes/pgp
+Acknowledgments: https://github.com/sickcodes/security
+Policy: https://sick.codes/submit-vulnerability/
