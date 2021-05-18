@@ -1,51 +1,71 @@
-# security
+# Sick Codes Security Advisories
 
-### CVE-2020-1559
-#### Private Internet Access VPN for Linux - Exposure of Sensitive Information to an Unauthorized Actor
+## - [View All Advisories](advisories)
+## - [Submit a Vulnerability](https://sick.codes/submit-vulnerability/)
+## - [Public PGP Key](https://github.com/sickcodes/pgp)
+## - [VDP (see below, or external)](https://sick.codes/vdp/) 
+# SICK CODES Vulnerability Disclosure Program & Vulnerability Disclosure Policy
 
-A vulnerability in the Private Internet Access (PIA) VPN Client for Linux v1.5 through v2.3+ allows remote attackers to bypass an intended VPN kill switch mechanism and read sensitive information via intercepting network traffic. Since v1.5, PIA has supported a "split tunnel" OpenVPN bypass option. The PIA killswitch & associated iptables firewall is designed to protect you while using the Internet. When the kill switch is configured to block all inbound and outbound network traffic, privileged applications can continue sending & receiving network traffic if net.ipv4.ip_forward has been enabled in the system kernel parameters. For example, a Docker container running on a host with the VPN turned off, and the kill switch turned on, can continue using the internet, leaking the host IP (CWE 200). In PIA 2.4.0+, policy-based routing is enabled by default and is used to direct all forwarded packets to the VPN interface automatically.
+[Terms Generated Under CC0-1.0 License using the Disclose.io project terms generator.](https://github.com/disclose/dioterms)
 
-**CVE-2020-15590** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-001.md
+## Introduction
 
-### CVE-2020-27402
-#### Hindotech HK1 TV Box - Root Privilege Escalation - Improper Access Control
+SICK CODES welcomes feedback from security researchers and the general public to help improve global security. If you believe you have discovered a vulnerability, privacy issue, exposed data, or other security issues in any software, hardware, or device, or in any of our assets, we want to hear from you. This policy outlines steps for reporting vulnerabilities to us, what we expect, what you can expect from us.
 
-The HK1 Box S905X3 TV Box contains a vulnerability that allows a local unprivileged user, such as a malicious APK, to escalate to root using the /system/xbin/su binary. While connected to the device through the serial port (UART), or while using adb as an unprivileged user, the local attacker can execute the /system/xbin/su binary and execute arbitrary code as root, steal social networking account tokens, WiFi passwords, cookies, saved passwords, user location data, message history, emails, or contacts, etc.
+## Systems in Scope
 
-**CVE-2020-27402** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-004.md
+This policy applies to any digital assets owned, operated, or maintained by SICK CODES, as well as certain digital assets that are particularly interesting or urgent in nature.
 
-### CVE-2020-8276
-#### Exposure of Sensitive Information to an Unauthorized Actor - Brave Browser Potentially Logs The Last Time A Tor Window Was Used.
+## Out of Scope
 
-A vulnerability in the Brave Browser allows an attacker to view the last time a Tor session was used in incognito mode. A local, on-disk attacker could read the Brave Browser's "Local State" json file and identify the last time a Tor session was used, affecting the confidentiality of a user's Tor session.
+Vulnerabilities that are already covered by another CNA mya be reported to us, which we will in turn forward to the respective CNA as found on [https://cve.mitre.org/cve/request_id.html](https://cve.mitre.org/cve/request_id.html).
 
-**CVE-2020-8276** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-013.md
+## Our Commitments
 
+When working with us, according to this policy, you can expect us to:
 
-### CVE-2020-27403
-#### Exposure of Information Through Directory Listing - TCL Android TV Filesystem Browsable to Unauthenticated Attackers Over the Adjacent Network on Port 7989
+- Respond to your report within 24 hours, and work with you to understand and validate your report;
+- Sometimes engage additional reseachers or analysts to assist in validating your findings;
+- Keep you informed at all stages about the progress of a vulnerability as it is processed;
+- Work to remediate discovered vulnerabilities in a timely manner, within our operational constraints; and
+- Extend Full Safe Harbor for your vulnerability research that is related to this policy.
 
-A vulnerability in the TCL Android Smart TV series by TCL Technology Group Corporation allows an attacker on the adjacent network to arbitrarily browse and download sensitive files over an insecure web server running on port 7989 that lists all files & directories.
+## Our Expectations
 
-**CVE-2020-27403** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-009.md
+In participating in our vulnerability disclosure program in good faith, we ask that you:
 
+- Play by the rules, including following this policy and any other relevant agreements. If there is any inconsistency between this policy and any other applicable terms, the terms of this policy will prevail;
+- Report any vulnerability you’ve discovered as soon as you can;
+- Avoid violating the privacy of others, disrupting our systems, destroying data, and/or harming user experience;
+- Use only the Official Channels to discuss vulnerability information with us;
+- We will usually work diretly with you on your research from the initial report until disclosure to resolve the issue before you disclose it publicly, or if the vulnerability is already public;
+- Perform testing only on in-scope systems, and respect systems and activities which are out-of-scope;
+- If a vulnerability provides unintended access to data: Limit the amount of data you access to the minimum required for effectively demonstrating a Proof of Concept; and cease testing and submit a report immediately if you encounter any user data during testing, such as Personally Identifiable Information (PII), Personal Healthcare Information (PHI), credit card data, or proprietary information;
+- You should only interact with test accounts you own or with explicit permission from the account holder; and
+- Do not engage in extortion.
+- Do not engage in blackmail.
 
-### CVE-2020-28055
-#### Incorrect Permission Assignment for Critical Vendor Resources - TCL Android TV Vendor Configuration & Upgrade Folders World Writable to Local Attacker
+## Official Channels
 
-A vulnerability in the TCL Android Smart TV series by TCL Technology Group Corporation allows a local unprivileged attacker, such as a malicious App, to read and write to critical vendor resource directories within the Android TV file system, including the vendor upgrades folder.
+- [https://sick.codes/submit-vulnerability/](https://sick.codes/submit-vulnerability/)
+- [https://twitter.com/sickcodes](https://twitter.com/sickcodes)
+- [https://keybase.io/sickcodes](https://keybase.io/sickcodes)
 
-**CVE-2020-28055** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-012.md
+Please use any of those channels, or email, to report security issues, providing all relevant information. The more details you provide, the easier it will be for us to triage and fix the issue.
 
+## Safe Harbor
 
-### CVE-2020-28360
-#### private-ip npm package - Incorrect Regular Expression - Insufficient RegEx in private-ip npm package v1.0.5 and below insufficiently filters reserved IP ranges resulting in indeterminate SSRF.
+When conducting vulnerability research, according to this policy, we consider this research conducted under this policy to be:
 
-Insufficient RegEx in private-ip npm package v1.0.5 and below insufficiently filters reserved IP ranges resulting in indeterminate SSRF. An attacker can perform a large range of requests to ARIN reserved IP ranges, resulting in an indeterminable number of critical attack vectors for server-side projects using private-ip 1.0.5 and below.
+- Authorized concerning any applicable anti-hacking laws, and we will not initiate or support legal action against you for accidental, good-faith violations of this policy;
+- Authorized concerning any relevant anti-circumvention laws, and we will not bring a claim against you for circumvention of technology controls;
+- Exempt from restrictions in our Terms of Service (TOS) and/or Acceptable Usage Policy (AUP) that would interfere with conducting security research, and we waive those restrictions on a limited basis; and
+- Lawful, helpful to the overall security of the Internet, and conducted in good faith.
 
-**CVE-2020-28360** https://github.com/sickcodes/security/blob/master/advisories/SICK-2020-022.md
+You are expected, as always, to comply with all applicable laws. If legal action is initiated by a third party against you and you have complied with this policy, we will take steps to make it known that your actions were conducted in compliance with this policy.
 
+If at any time you have concerns or are uncertain whether your security research is consistent with this policy, please submit a report through one of our Official Channels before going any further.
 
+> Note that the Safe Harbor applies only to legal claims under the control of the organization participating in this policy, and that the policy does not bind independent third parties.
 
-
-
+We will do our very best to protect you, and if you wish to remain anonymous during disclosure, you are more than welcome to make that request.
